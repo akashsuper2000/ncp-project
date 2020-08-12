@@ -1,63 +1,45 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Samaritan </title>
-    <link rel = "icon" href = "img/samaritan.png" type = "text"> 
-    <meta name="description" content="Login - Register Template">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel='stylesheet' href='css/payment.css'>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-        body {
-            background-color: #87ceeb ;
-        }
-    </style>
+    <title>Login</title>
+    <link rel="stylesheet" href="content/css/login.css">
+    <link rel="stylesheet" href="content/css/bootstrap.css">
 </head>
-
 <body>
-    <div id="container-login">
-        <div id="title">
-            <i class="material-icons lock">lock</i> Login
-        </div>
+    <div class='Container'>
+            <div class='Box'>
+                <img src='content/univlogo.svg' class='Userloginlogo' alt='User' />
+                <h1 class='Heads'>Login</h1>
+                <div class='Content'>
+                    <form action='dashboard.html'>
+    
+                        <div class='FormGroup'>
+                            <input class='InputBoxes' name='id' placeholder='Username' required></input>
+                            <span class='Subheads' name='userinv' style='visibility: collapse;'>Enter a
+                                username!</span>
+                        </div>
+    
+                        <div class='FormGroup'>
+                            <input class='InputBoxes' name='password' type='password' placeholder='Password'
+                                required></input>
+                            <span class='Subheads' name='passinv' style='visibility: collapse;'>Invalid
+                                password!</span>
+                        </div>
+    
+                        <input class='btn-lg btn btn-default InputBoxes Select' type='submit' value='Login' /><br />
+                        <div class='FormGroup'>
+                            <a href="register.html">
+                            <button type='button' class='btn-md btn btn-default Smbtn' value='Register' > Register</button></a>
 
-        <form action='index.html'>
-            <div class="input">
-                <div class="input-addon">
-                    <i class="material-icons">face</i>
+                            <a href="index.html">
+                            <button type='button' class='btn-md btn btn-default Smbtn' value='Forgot Password?'>Forgot Password?</button></a>
+                        </div>
+                    </form>
+    
                 </div>
-                <input id="username" placeholder="Username" type="text" required class="validate" autocomplete="off">
             </div>
-
-            <div class="clearfix"></div>
-
-            <div class="input">
-                <div class="input-addon">
-                    <i class="material-icons">vpn_key</i>
-                </div>
-                <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
-            </div>
-
-            <div class="remember-me">
-                <input type="checkbox">
-                <span style="color: #DDD">Remember Me</span>
-            </div>
-
-            <input type="submit" value="Log In" />
-        </form>
-
-        <div class="forgot-password">
-            <a href="#">Forgot your password?</a>
-        </div>
-
-        <div class="register">
-            Don't have an account yet?
-            <a href="#"><button id="register-link" onclick="window.location.replace('register.html')">Register here</button></a>
-        </div>
     </div>
-
-
 </body>
-
 </html>
