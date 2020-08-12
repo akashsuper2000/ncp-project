@@ -4,51 +4,55 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Samaritan - Payment </title>
+    <link rel = "icon" href = "img/samaritan.png" type = "text"> 
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel='stylesheet' type='text/css' media='screen' href='payment.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' href='css/payment.css'>
 </head>
 
 <body>
     <div class="container ">
-        <div class="row">
-            <div class="col-xs-12 col-md-4">
+        <div class="row	" style="width: 75rem;font-size:0.9em;">
+            <div class="col-12 col-md-4">
 
-                <div class="panel panel-default credit-card-box">
-                    <div class="panel-heading display-table">
+                <div class="card card-default credit-card-box" >
+                    <div class="card-header display-table">
                         <div class="row display-tr">
-                            <h3 class="panel-title display-td">Payment Details</h3>
-                            <div class="display-td">
-                                <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
-                            </div>
+                            <h6 class="card-title display-td" style="font-weight: bold;">Payment Details</h6>
+                            <span class="display-td">
+                                <img class="img-fluid pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                            </span>
                         </div>
                     </div>
-                    <div class="panel-body">
+                    <div class="card-body">
                         <form role="form" id="payment-form">
                             <div class="row">
-                                <div class="col-xs-12">
+                                <div class="col-12">
                                     <div class="form-group">
                                         <label for="cardNumber">CARD NUMBER</label>
                                         <div class="input-group">
                                             <input type="tel" class="form-control" name="cardNumber"
                                                 placeholder="Enter Valid Card Number" autocomplete="cc-number" required
                                                 autofocus />
-                                            <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                             <span class="input-group-addon" style="padding:8px;height:40px;border: 1px solid">
+	                                        <i class="fa fa-id-card"></i>
+	                                    </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xs-7 col-md-7">
+                                <div class="col-7 col-md-7">
                                     <div class="form-group">
-                                        <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span
-                                                class="visible-xs-inline">EXP</span> DATE</label>
+                                        <label for="cardExpiry">
+                                        	<span>EXPIRATION DATE</span></label>
                                         <input type="tel" class="form-control" name="cardExpiry" placeholder="MM / YY"
                                             autocomplete="cc-exp" required />
                                     </div>
                                 </div>
-                                <div class="col-xs-5 col-md-5 pull-right">
+                                <div class="col-5 col-md-5 pull-right">
                                     <div class="form-group">
                                         <label for="cardCVC">CV CODE</label>
                                         <input type="tel" class="form-control" name="cardCVC" placeholder="CVC"
@@ -57,7 +61,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12">
+                                <div class="col-12">
                                     <div class="form-group">
                                         <label for="couponCode">CARD HOLDER NAME</label>
                                         <input type="text" class="form-control" name="couponCode" />
@@ -65,7 +69,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12">
+                                <div class="col-12">
                                     <div class="form-group">
                                         <label for="couponCode">PAN CARD NUMBER</label>
                                         In accordance with the Finance Act 2020, 80G Tax Exemption is received on providing PAN card details of the donor. Please share your PAN details below to receive the receipt. If not provided receipt will not be shared.
@@ -76,12 +80,12 @@
 
 
                             <div class="row">
-                                <div class="col-xs-12">
+                                <div class="col-12">
                                     <button class="btn btn-success btn-lg btn-block" type="submit">Donate</button>
                                 </div>
                             </div>
                             <div class="row" style="display:none;">
-                                <div class="col-xs-12">
+                                <div class="col-12">
                                     <p class="payment-errors"></p>
                                 </div>
                             </div>
