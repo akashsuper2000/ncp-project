@@ -35,13 +35,18 @@ form {
     font-size: 20px;
 }
 
+#contact, #review {
+    margin-top: 30px;
+    margin-bottom: -20px;
+}
+
 input[type=text],
 input[type=email],
 input[type=number],
 #dropdown,
 button {
     width: 400px;
-    height: 30px;
+    height: 50px;
     margin: 10px;
     padding: 10px;
     font-size: 18px;
@@ -50,12 +55,12 @@ button {
 }
 
 #dropdown-info {
-    margin-top: -40px;
+    margin-top: -20px;
 }
 
 #dropdown {
-    width: 415px;
-    height: 43px;
+    width: 400px;
+    height: 50px;
 }
 
 #dropdown:hover {
@@ -73,6 +78,11 @@ textarea {
     border: 2px solid black;
 }
 
+#submit {
+    height: 50px;
+    margin: 50px;
+}
+
 textarea:focus,
 input[type=text]:focus,
 input[type=email]:focus,
@@ -87,9 +97,9 @@ textarea::placeholder {
 
 input[type=checkbox],
 input[type=radio] {
-    width: 20px;
+    width: 40px;
     height: 20px;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 10px;
     cursor: pointer;
