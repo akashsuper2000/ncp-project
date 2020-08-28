@@ -20,82 +20,19 @@
           background-size: cover;
       }
     </style>
+
+    <script src="content/jquery/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#navigation').load('navigationbar.html');
+        });
+    </script>
+
 </head>
 
 <body>
     <section class="hero is-info is-fullheight">
-        <div class="hero-head">
-            <nav class="navbar">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <a class="navbar-item" style="background-color: #fff;" href="#">
-                            <img style="padding: 3px;border: 2px solid black" src="content/img/samaritan.png"  alt="💯"> 
-                            <label style="background-color: #fff;color:#000;padding:3px">AMRITA Outreach</label>
-                        </a>
-                    </div>
-                    <div id="navbarMenu" class="navbar-menu">
-                        <div class="navbar-end">
-                            <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="index.html">
-                                    <span class="icon">
-                                        <i class="fa fa-home"></i>
-                                    </span>
-                                    <span>Home</span>
-                                </a>
-                            </span>
-                            <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="about.html">
-                                    <span class="icon">
-                                        <i class="fa fa-superpowers"></i>
-                                    </span>
-                                    <span>About Us</span>
-                                </a>
-                            </span>
-                            <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="work.html">
-                                    <span class="icon">
-                                        <i class="fa fa-envelope"></i>
-                                    </span>
-                                    <span>Our Work</span>
-                                </a>
-                            </span>
-                            <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="#">
-                                    <span class="icon">
-                                        <i class="fa fa-heartbeat"></i>
-                                    </span>
-                                    <span>Blog</span>
-                                </a>
-                            </span>
-                            <span class="navbar-item">
-                                <a class="button is-white is-outlined" href='payment.html'>
-                                    <span class="icon">
-                                        <i class="fa fa-inr"></i>
-                                    </span>
-                                    <span>Donate</span>
-                                </a>
-                            </span>
-                            <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="feedback.html">
-                                    <span class="icon">
-                                        <i class="fa fa-book"></i>
-                                    </span>
-                                    <span>Feedback</span>
-                                </a>
-                            </span>
-                            <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="admin.html">
-                                    <span class="icon">
-                                        <i class="fa fa-user"></i>
-                                    </span>
-                                    <span>Admin</span>
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            </div>
+        <div id="navigation"> </div>
 
 <div class="hero-body">
     <div class="container has-text-centered">
@@ -116,7 +53,7 @@
                             <div class="media">
                                 <div class="media-content">
                                     
-                                    <p class="title is-6">Help put a smile on rural children's face</p>
+                                    <p class="title is-6" style="color: black">Help put a smile on rural children's face</p>
                                 </div>
                             </div>
 
@@ -139,7 +76,7 @@
                             <div class="media">
                                 <div class="media-content">
                                     
-                                    <p class="title is-6">Sponsor monthly groceries for a family</p>
+                                    <p class="title is-6" style="color: black">Sponsor monthly groceries for a family</p>
                                 </div>
                             </div>
 
@@ -163,12 +100,12 @@
             <h2 class="title">Weekly dose of inspiration delivered straight to your inbox. Sign up here.
             </h2>
 
-            <form>
+            <form action="#">
                 <div class="field is-horizontal">
                     <div class="field-body">
                         <div class="field">
                             <p class="control has-icons-left is-outlined">
-                                <input class="input " type="text" placeholder="Name">
+                                <input class="input " type="text" placeholder="Name" required>
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-user"></i>
                                 </span>
@@ -176,7 +113,7 @@
                         </div>
                         <div class="field">
                             <p class="control has-icons-left is-outlined">
-                                <input class="input " type="email" placeholder="Email">
+                                <input class="input " type="email" placeholder="Email" pattern='^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$' required>
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-envelope"></i>
                                 </span>

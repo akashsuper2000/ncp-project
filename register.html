@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register</title>
+    <link rel = "icon" href = "content/img/samaritan.png" type = "text"> 
     <link rel="stylesheet" href="content/css/login.css">
     <link rel="stylesheet" href="content/css/bootstrap.css">
 </head>
@@ -13,45 +14,90 @@
     <div class='Container'>
 
         <div class='Box'>
-            <img src='content/univlogo.svg' class='Userloginlogo' alt='User' />
-            <h1 class='Heads'>Register</h1>
+            <img src='content/img/campus-ettimadai.jpg' class='Userloginlogo' alt='User' />
+            <h1 class='Heads'>Register as a donor</h1>
+            <h7 class='btn-danger'>* We collect this information only for official records purposes. We won't spam your mails.</h7>
             <div class='Content'>
-                <form action='/index.html'>
+                <form action='/payment.html' onsubmit="return validate()">
 
                     <div class='FormGroup'>
                         <input class='InputBoxes' name='id' placeholder='Username' required></input>
-                        <span class='Subheads' name='userinv' style='visibility: collapse;'>Enter a
-                            username!</span>
+                        
                     </div>
 
-                    <div class='FormGroup'>
-                        <input class='InputBoxes' name='name' placeholder='Full Name' required></input>
-                        <span class='Subheads' name='userinv' style='visibility: collapse;'>Enter a
-                            username!</span>
-                    </div>
 
                     <div class='FormGroup'>
                         <input class='InputBoxes' name='email' placeholder='Email ID'
                             title='Please enter a valid Email ID' pattern='^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$'
                             required></input>
-                        <span class='Subheads' name='userinv' style='visibility: collapse;'>Enter an
-                            Email!</span>
+                        
                     </div>
 
-                    <input class='btn-lg btn btn-default InputBoxes Select' type='submit' value='Register' /><br />
                     <div class='FormGroup'>
-                        <a href="index.html">
+                            <input class='InputBoxes' name='password' type='password' id="pass" placeholder='Enter Password'
+                                required></input>
+                            <span class='Subheads' name='pass' style='visibility: collapse;'></span>
+                    </div>
+
+                    <div class='FormGroup'>
+                            <input class='InputBoxes' name='password' type='password' id="repass" placeholder='Reenter Password'
+                                required></input>
+                            <span class='Subheads' name='pass' style='visibility: collapse;'></span>      
+                            <h7 class='text-danger' id='passinv'></h7>
+                    </div>
+
+
+                    <input class='btn-lg btn btn-default InputBoxes Select' style="width:150px" type='submit' value='Register' /><br />
+                    
+                    <div class='FormGroup'>
+                        <a href="login.html">
                             <button type='button' class='btn-md btn btn-default Smbtn' value='Login'>
                                 Login</button></a>
 
                         <a href="register.html">
                             <button type='button' class='btn-md btn btn-default Smbtn' value='Forgot Password?'>Forgot Password?</button></a>
                     </div>
+
                 </form>
 
             </div>
         </div>
     </div>
 </body>
+<script type="text/javascript">
+    function validate()
+    {
+        var pass = document.getElementById("pass")
+        var repass = document.getElementById("repass")
+
+        if(pass.value==repass.value)
+         {
+            document.getElementById("passinv").innerText = ""
+            return CheckPassword();
+         }
+
+        else
+        {
+            document.getElementById("passinv").innerText = "Passwords don't match..."
+            return false;
+        }
+    }
+
+    function CheckPassword() {
+        var inputtxt = document.getElementById("pass")
+        var decimal = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+        if (inputtxt.value.match(decimal)!=null) {
+            document.getElementById("passinv").innerText = ""
+            return true;
+        } 
+        else 
+        {
+            document.getElementById("passinv").innerText = "Passwords must include atleast one uppercase,lowercase,number,special character and between 8-15 characters"
+            return false;
+        }
+        return false;
+    }
+
+</script>
 
 </html>

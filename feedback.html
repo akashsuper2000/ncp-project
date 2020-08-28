@@ -8,11 +8,22 @@
     <link rel = "icon" href = "content/img/samaritan.png" type = "text"> 
     <link rel="stylesheet" href="content/css/feedback.css">
     <link rel="stylesheet" href="content/css/bootstrap.css">
+
+    <script src="content/jquery/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#navigation').load('navigationbar.html');
+        });
+    </script>
+
 </head>
 
 <body>
-
-    <main>
+        <div class="hero is-info is-fullheight" > 
+            <div id="navigation" style="padding: 0px;"></div>
+        
+        <main style="background-color: #fff;color: #000">
+    
         <div class='spacer'></div>
 
         <header>
@@ -76,9 +87,10 @@
             </fieldset>
 
             <button type='submit' id='submit'>Submit</button>
-        </form>
-    </main>
-
+           </form>
+        </main>
+        </div>
+        
 </body>
 
 </html>
