@@ -19,12 +19,31 @@
 
           background-size: cover;
       }
+      .card
+      {
+        padding: 20px;
+        border-radius: 25px;
+      }
+      .btn
+      {
+        margin-top: 100px;
+        padding: 10px;
+      }
+      .donor
+      {
+        margin-top: 20px;
+      }
+      .motto
+      {
+        border:2px solid white;
+        
+      }
     </style>
 
     <script src="content/jquery/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#navigation').load('navigationbar.html');
+            $('#navigation').load('content/jquery/navigationbar.html');
         });
     </script>
 
@@ -36,17 +55,21 @@
 
 <div class="hero-body">
     <div class="container has-text-centered">
+    <div class="hero-body">
+    <div class="container motto has-text-centered">
+                       <span>We are group of volunteers working together for a common cause. On our platform, you can donate to a nonprofit with confidence. Our robust due diligence process covers legal, compliance, financial and impact checks for each donation made to any non-profit, including in-person visits to beneficiaries and actual feedback reports. We do all this so that our donors can donate with confidence that their giving is indeed doing what it's supposed to - change lives.</span>
+        </div>
+    </div>
+
     <section class="section">
         <div class="container has-text-centered">
             
-            <p class="has-background-danger"> We are group of volunteers working together for a common cause. On our platform, you can donate to a nonprofit with confidence. Our robust due diligence process covers legal, compliance, financial and impact checks for each donation made to any non-profit, including in-person visits to beneficiaries and actual feedback reports. We do all this so that our donors can donate with confidence that their giving is indeed doing what it's supposed to - change lives.</p>
-
             <div class="columns is-centered" style="padding: 2rem">
-                <div class="column">
+                <div class="column"> 
                     <div class="card">
                         <div class="card-image">
-                            <figure class="image is-2by1">
-                                <img src="content/img/raasukutti.jpg" alt="placeholder">
+                            <figure class="image is-16by9">
+                                <img class="has-ratio is-rounded" width="2px" src="content/img/raasukutti.jpg" alt="placeholder">
                             </figure>
                         </div>
                         <div class="card-content">
@@ -59,8 +82,9 @@
 
                             <div class="content">
                                 You can sponsor a child's education in monthly basis
-                                <a class="has-text-white-bis has-background-success px-2" href="donate.html">DONATE</a>
-                                
+                                <div class="donor">
+                                     <a class="btn has-text-white-bis has-background-success" href="register.html">DONATE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -68,8 +92,8 @@
                 <div class="column">
                     <div class="card">
                         <div class="card-image">
-                            <figure class="image is-2by1">
-                                <img src="content/img/kaakamuttai.jpg" alt="placeholder">
+                            <figure class="image is-16by9">
+                                <img class="has-ratio is-rounded" src="content/img/kaakamuttai.jpg" alt="placeholder">
                             </figure>
                         </div>
                         <div class="card-content">
@@ -82,19 +106,21 @@
 
                             <div class="content">
                                 Please visit the link for donating.
-                                <a class="has-text-white-bis has-background-success px-2" href="donate.html">DONATE</a>
-                                
+                                <div class="donor">
+                                     <a class="btn has-text-white-bis has-background-success" href="register.html">DONATE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
+        
     </section>
-</div></div>
+    </div>
+</div>
+    
 </section>
-
     <section class="section has-background-success">
         <div class="container has-text-centered ">
             <h2 class="title">Weekly dose of inspiration delivered straight to your inbox. Sign up here.
@@ -107,7 +133,7 @@
                             <p class="control has-icons-left is-outlined">
                                 <input class="input " type="text" placeholder="Name" required>
                                 <span class="icon is-small is-left">
-                                    <i class="fas fa-user"></i>
+                                    <i class="fa fa-user"></i>
                                 </span>
                             </p>
                         </div>
@@ -115,7 +141,7 @@
                             <p class="control has-icons-left is-outlined">
                                 <input class="input " type="email" placeholder="Email" pattern='^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$' required>
                                 <span class="icon is-small is-left">
-                                    <i class="fas fa-envelope"></i>
+                                    <i class="fa fa-envelope"></i>
                                 </span>
                             </p>
                         </div>
@@ -138,5 +164,34 @@
         </div>
     </section>
 
+    
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  console.log($navbarBurgers)
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
 </body>
+
 </html>
