@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Samaritan </title>
+    <link rel = "icon" href = "content/img/samaritan.png" type = "text"> 
+    <script src="content/jquery/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#topnav').load('content/jquery/admin_topnav.html');
+            $('#sidenav').load('content/jquery/admin_sidenav.html');
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="content/css/sponsor_admin.css">
+    
+</head>
+
+<body>
+    
+    <div id="topnav"></div>
+
+    <div class="container">
+        <div class="columns">
+            <div id="sidenav"> </div>
+            <div class="column is-9">
+
+
+            <div class="container">
+            <section class="filterBar">
+               <div class="search-ui">
+             <label for="search">Search</label>
+             <div>
+                <form action="#">
+                  <input type="text" placeholder="Start typing..." name="search">
+                  <button type="submit">Search</button>
+                </form>
+              </div>
+               </div>
+               <div class="filter-ui">
+            <label for="filters">Filter by</label>
+            <div class="styled-select">
+               <select name="accountStatus" id="filters">
+                  <option value="active">Everyone</option>
+                  <optgroup label="Audience">
+                     <option value="commenters">Commenters</option>
+                  </optgroup>
+                  <optgroup label="Organization">
+                     <option value="admins">Admins</option>
+                     <option value="moderators">Moderators</option>
+                     <option value="banned">Staff</option>
+                  </optgroup>
+               </select>
+            </div>
+               </div>
+            </section>
+
+            <table class="dbdetails">
+               <tr class="table-header">
+                  <th>Username</th>
+                  <th>Email Address</th>
+                  <th>Member Since</th>
+                  <th class="roleHead">Role</th>
+                  <th class="statusHead">Status</th>
+               </tr>
+               <tr>
+                  <td class="username">Akash</td>
+                  <td class="email"><a href="mailto:email@email.com">akashsuper2000@gmail.com</a></td>
+                  <td>04/09/2020</td>
+                  <td class="admin">Admin</td>
+                  <td class="activeUser">Active</td>
+               </tr>
+               <tr>
+                  <td class="username">Abhishek</td>
+                  <td class="email"><a href="mailto:email@email.com">abhimarpu99@gmail.com</a></td>
+                  <td>04/09/2020</td>
+                  <td class="admin">Admin</td>
+                  <td class="activeUser">Active</td>
+               </tr>
+               <tr>
+                  <td class="username">Hare Sankaran RV</td>
+                  <td class="email"><a href="mailto:email@email.com">haresrv2000@mail.com</a></td>
+                  <td>04/09/2020</td>
+                  <td class="admin">Admin</td>
+                  <td class="activeUser">Active</td>
+               </tr>
+               <tr>
+                  <td class="username">Himanshu Kumar</td>
+                  <td class="email"><a href="mailto:email@email.com">himanshu6k@gmail.com</a></td>
+                  <td>04/09/2020</td>
+                  <td class="admin">Admin</td>
+                  <td class="activeUser">Active</td>
+               </tr>
+               <tr>
+                  <td class="username">Akshay Penumudi</td>
+                  <td class="email"><a href="mailto:email@email.com">akshaypenumudi123@gmail.com</a></td>
+                  <td>04/09/2020</td>
+                  <td class="admin">Admin</td>
+                  <td class="activeUser">Active</td>
+               </tr>
+               <tr>
+                  <td class="username">John Reese</td>
+                  <td class="email"><a href="mailto:email@email.com">johndoe@mail.com</a></td>
+                  <td>08/09/2020</td>
+                  <td class="commenter">Sponsor</td>
+                  <td class="activeUser">Active</td>
+               </tr>
+               <tr>
+                  <td class="username">Peter Yogorov</td>
+                  <td class="email"><a href="mailto:email@email.com">pete@mail.com</a></td>      
+                  <td>10/09/2020</td>
+                  <td class="commenter">Former Employee</td>
+                  <td class="bannedUser">Banned</td>
+               </tr>
+               <tr>
+                  <td class="username">Harold Finch</td>
+                  <td class="email"><a href="mailto:email@email.com">undercover_finch@yahoo.com</a></td>
+                  <td>04/01/2002</td>
+                  <td class="admin">IT Employee</td>
+                  <td class="activeUser">Active</td>
+               </tr>
+               <tr>
+                  <td class="username">Fusco</td>
+                  <td class="email"><a href="mailto:email@email.com">fusco@mail.com</a></td>      
+                  <td>04/01/2020</td>
+                  <td class="moderator">Moderator</td>
+                  <td class="suspendedUser">Suspended</td>
+               </tr>
+               
+            </table>
+            </div>
+      
+            </div>
+        </div>
+    </div>
+    
+
+
+</body>
+
+</html>
+
