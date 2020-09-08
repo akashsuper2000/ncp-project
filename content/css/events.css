@@ -1,10 +1,18 @@
 @charset "UTF-8";
+html {
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+ }
 /* Body */
 body {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	background-color: #FFFFFF;
-	margin: 0;
+	margin: 0px;
+	min-height: 100%;
+	width: 100%;
 }
+
 /* Container */
 .container {
 	width: 90%;
@@ -45,7 +53,8 @@ body {
 .gallery {
 	clear: both;
 	display: inline-block;
-    width: 100%;
+	width: 100%;
+	font-size: 200%;
 	background-color: #FFFFFF;
 	/* [disabled]min-width: 400px;
 */
@@ -59,7 +68,7 @@ body {
 	clear: both;
 	display: inline-block;
     width: 100%;
-	background-color: #FFFFFF;
+	background-color: #af1e1e;
 	/* [disabled]min-width: 400px;
 */
 	padding-bottom: 35px;
@@ -78,12 +87,12 @@ body {
 	margin-right: 1%;
 	border-radius: 3px;
 	padding-top: 20px;
-	border-bottom: 4px solid #6DC7D0;
+	border-bottom: 4px solid #460909;
 }
 .gallery .thumbnail h4 {
 	margin-top: 5px;
 	margin-bottom: 5px;
-	color: #52BAD5;
+	color: #460909;
 	text-align: left;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -96,8 +105,10 @@ body {
 }
 /* More info */
 .intro {
-	background-color: #FFFFFF;
-	padding-bottom: 35px;
+	display: inline-block;
+    width: 80%;
+    background-color: #55070700;	
+	/* padding-bottom: 35px; */
 }
 .column {
 	width: 100%;
@@ -182,7 +193,7 @@ body {
 	transition: all 0.3s linear;
 }
 .button1:hover {
-	background-color: #a12525;
+	background-color: #a19090;
 	color: #FFFFFF;
 	cursor: pointer;
 }
@@ -206,10 +217,6 @@ footer {
 .intro {
 	display: inline-block;
     background-color: #55070700;
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ), url('content/img/m4.jpg') no-repeat center center fixed;
 }
 .profile {
 	width: 50%;
