@@ -8,6 +8,42 @@
     <link rel = "icon" href = "content/img/samaritan.png" type = "text"> 
     <link rel="stylesheet" href="content/css/login.css">
     <link rel="stylesheet" href="content/css/bootstrap.css">
+<script type="text/javascript">
+    function validate()
+    {
+        var pass = document.getElementById("pass")
+        var repass = document.getElementById("repass")
+
+        if(pass.value==repass.value)
+         {
+            document.getElementById("passinv").innerText = ""
+            return CheckPassword();
+         }
+
+        else
+        {
+            document.getElementById("passinv").innerText = "Passwords don't match..."
+            return false;
+        }
+    }
+
+    function CheckPassword() {
+        var inputtxt = document.getElementById("pass")
+        var decimal = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+        if (inputtxt.value.match(decimal)!=null) {
+            document.getElementById("passinv").innerText = ""
+            return true;
+        } 
+        else 
+        {
+            document.getElementById("passinv").innerText = "Passwords must include atleast one uppercase,lowercase,number,special character and between 8-15 characters"
+            return false;
+        }
+        return false;
+    }
+
+</script>
+
 </head>
 
 <body>
@@ -21,7 +57,7 @@
                 <form action='/payment.html' onsubmit="return validate()">
 
                     <div class='FormGroup'>
-                        <input class='InputBoxes' name='id' placeholder='Username' required></input>
+                        <input class='InputBoxes' name='id' placeholder='Username' pattern="([^\s][A-zÀ-ž\s]+)" required></input>
                         
                     </div>
 
@@ -64,40 +100,5 @@
         </div>
     </div>
 </body>
-<script type="text/javascript">
-    function validate()
-    {
-        var pass = document.getElementById("pass")
-        var repass = document.getElementById("repass")
-
-        if(pass.value==repass.value)
-         {
-            document.getElementById("passinv").innerText = ""
-            return CheckPassword();
-         }
-
-        else
-        {
-            document.getElementById("passinv").innerText = "Passwords don't match..."
-            return false;
-        }
-    }
-
-    function CheckPassword() {
-        var inputtxt = document.getElementById("pass")
-        var decimal = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
-        if (inputtxt.value.match(decimal)!=null) {
-            document.getElementById("passinv").innerText = ""
-            return true;
-        } 
-        else 
-        {
-            document.getElementById("passinv").innerText = "Passwords must include atleast one uppercase,lowercase,number,special character and between 8-15 characters"
-            return false;
-        }
-        return false;
-    }
-
-</script>
 
 </html>
