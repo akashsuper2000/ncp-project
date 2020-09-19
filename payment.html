@@ -11,37 +11,40 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="content/css/bootstrap.css">
     <link rel='stylesheet' type='text/css' href='content/css/payment.css'>
-<script type="text/javascript">
-function validDate() {
-  var dValue = document.getElementById("cardExpiry").value;
-  var result = false;
-  dValue = dValue.split('/');
-  console.log(dValue)
-  if(dValue.length<2)
-    return false;
-  var pattern = /^\d{2}$/;
 
-  if (dValue[0] < 1 || dValue[0] > 12)
-      result = true;
+    <script type="text/javascript">
+        
+        function validDate() {
+          var dValue = document.getElementById("cardExpiry").value;
+          var result = false;
+          dValue = dValue.split('/');
+          console.log(dValue)
+          if(dValue.length<2)
+            return false;
+          var pattern = /^\d{2}$/;
 
-  if (!pattern.test(dValue[0]) || !pattern.test(dValue[1]))
-      result = true;
+          if (dValue[0] < 1 || dValue[0] > 12)
+              result = true;
 
-  if (dValue[2])
-      result = true;
+          if (!pattern.test(dValue[0]) || !pattern.test(dValue[1]))
+              result = true;
 
-  return !result;
-}
+          if (dValue[2])
+              result = true;
 
-</script>
+          return !result;
+        }
+
+    </script>
+
 </head>
 
 <body>
-
+    <!-- Main Container -->
     <div class="container ">
         <div class="row	" style="width: 75rem;font-size:0.9em;">
             <div class="col-12 col-md-4">
-
+                <!-- Card box -->
                 <div class="card card-default credit-card-box" >
                     <div class="card-header display-table">
                         <div class="row display-tr">
@@ -51,6 +54,7 @@ function validDate() {
                             </span>
                         </div>
                     </div>
+                    <!-- Body Portion -->
                     <div class="card-body">
                         <form role="form" id="payment-form" onsubmit="return validDate()" action="receipt.html">
 
@@ -118,14 +122,13 @@ function validDate() {
                             <h7> Don't click back button or refresh the page</h7>
                         </form>
                     </div>
+                    <!-- End of Body -->
                 </div>
+                <!-- End of Card -->
             </div>
-
-
-
         </div>
     </div>
-
+<!-- End of Main Container -->
 </body>
 
 </html>
