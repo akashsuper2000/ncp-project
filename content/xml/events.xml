@@ -3,7 +3,7 @@
 
 <!DOCTYPE events[
 <!ELEMENT events (event+)>
-<!ELEMENT events (id, addedbyid, title, describe, date)>
+<!ELEMENT event (id, addedbyid, title, describe, date)>
 <!ELEMENT id (#PCDATA)>
 <!ELEMENT addedbyid (#PCDATA)>
 <!ELEMENT title (#PCDATA)>
