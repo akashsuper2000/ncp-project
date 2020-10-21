@@ -1,19 +1,31 @@
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-  <xs:element name="payments" type="paymentsType"/>
-  <xs:complexType name="paymentType">
-    <xs:sequence>
-      <xs:element type="xs:short" name="paymentRefNo"/>
-      <xs:element type="xs:byte" name="userid"/>
-      <xs:element type="xs:short" name="amount"/>
-      <xs:element type="xs:string" name="donated_date"/>
-      <xs:element type="xs:string" name="pan_number"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="paymentsType">
-    <xs:sequence>
-      <xs:element type="paymentType" name="payment" maxOccurs="unbounded" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
+	<xs:element name="payments" type="paymentsType" />
+	<xs:complexType name="paymentType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="paymentRefNo" />
+			<xs:element type="xs:string" name="userid" />
+			<xs:element type="xs:unsignedInt" name="amount" />
+			<xs:element type="xs:date" name="donated_date" />
+			<xs:element name="pan_number" >
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[A-Za-z]{5}\d{4}[A-Za-z]"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="paymentsType">
+		<xs:sequence>
+			<xs:element type="paymentType" name="payment"
+				maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	
+
 </xs:schema>
-
