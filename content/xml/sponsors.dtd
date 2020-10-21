@@ -1,0 +1,17 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT users (user)+>
+<!ATTLIST users
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT user (username,countrycode)>
+<!ATTLIST user
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT username (#PCDATA)>
+<!ATTLIST username
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT countrycode (#PCDATA)>
+<!ATTLIST countrycode
+  xmlns CDATA #FIXED ''>

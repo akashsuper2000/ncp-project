@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone = "no"?>
+<?xml-stylesheet type="html/xsl" href="login.xsl"?>
+
+<!DOCTYPE countries[
+<!ELEMENT countries (country+)>
+<!ELEMENT country (code, name, continent_name)>
+<!ELEMENT code (#PCDATA)>
+<!ELEMENT name(#PCDATA)>
+<!ELEMENT continent_name(#PCDATA)>
+
+]>
+
+
+<countries>
+    <country>
+        <code>+91</code>
+        <name>India</name>
+        <continent_name>Asia</continent_name>
+
+    </country>
+
+    <countryr>
+       <code>+91</code>
+        <name>India</name>
+        <continent_name>Asia</continent_name>
+    </countryr>
+
+    <country>
+        <code>+91</code>
+        <name>India</name>
+        <continent_name>Asia</continent_name>
+    </country>
+
+    <country>
+        <code>+91</code>
+        <name>India</name>
+        <continent_name>Asia</continent_name>
+    </country>
+
+    <country>
+       <code>+91</code>
+        <name>India</name>
+        <continent_name>Asia</continent_name>
+    </country>
+
+
+</countries>

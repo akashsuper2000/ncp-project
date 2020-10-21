@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone = "no"?>
 <?xml-stylesheet type="html/xsl" href="register.xsl"?>
 
-<!DOCTYPE users [
+<!DOCTYPE register [
 <!ELEMENT users (user+)>
 <!ELEMENT user (username, email, password, reenter_password)>
 <!ELEMENT username (#PCDATA)>
