@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone = "no"?>
+<?xml-stylesheet href="sponsorpayments.xsl" type="text/xsl" ?>
+
+<!DOCTYPE payments [
+<!ELEMENT payments (payment*)>
+<!ELEMENT payment (paymentRefNo,userid,amount, donated_date,pan_number)>
+<!ELEMENT paymentRefNo (#PCDATA)>
+<!ELEMENT userid (#PCDATA)>
+<!ELEMENT amount (#PCDATA)>
+<!ELEMENT donated_date (#PCDATA)>
+<!ELEMENT pan_number (#PCDATA)>
+
+<!ATTLIST payments xmlns:xsi CDATA #IMPLIED>
+<!ATTLIST payments xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+]>
+
+
+<payments xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="sponsorpayments.xsd">
+    <payment>
+        <paymentRefNo>1001</paymentRefNo>
+        <userid>17102</userid>
+        <amount>3000</amount>        
+        <donated_date>2020-05-20</donated_date>
+        <pan_number>ADCPV3929P</pan_number>
+    </payment>
+    <payment>
+        <paymentRefNo>1002</paymentRefNo>
+        <userid>17138</userid>
+        <amount>3000</amount>        
+        <donated_date>2020-05-22</donated_date>
+        <pan_number>ADCPV4929P</pan_number>
+    </payment>
+    <payment>
+        <paymentRefNo>1003</paymentRefNo>
+        <userid>17119</userid>
+        <amount>3000</amount>        
+        <donated_date>2020-06-02</donated_date>
+        <pan_number>ADCPV3959P</pan_number>
+    </payment>
+    <payment>
+        <paymentRefNo>1004</paymentRefNo>
+        <userid>17105</userid>
+        <amount>3000</amount>        
+        <donated_date>2020-06-15</donated_date>
+        <pan_number>ADCPV3529P</pan_number>
+    </payment>
+    <payment>
+        <paymentRefNo>1005</paymentRefNo>
+        <userid>17120</userid>
+        <amount>3000</amount>        
+        <donated_date>2020-07-24</donated_date>
+        <pan_number>ADCCV3924P</pan_number>
+    </payment>
+</payments>
+    

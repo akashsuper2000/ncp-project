@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone = "no"?>
 <?xml-stylesheet type="html/xsl" href="login.xsl"?>
 
-<!DOCTYPE login [
+<!DOCTYPE sponsors[
 <!ELEMENT users (user+)>
-<!ELEMENT user (username, password)>
+<!ELEMENT user (username, countrycode)>
 <!ELEMENT username (#PCDATA)>
-<!ELEMENT password (#PCDATA)>
+<!ELEMENT countrycode (#PCDATA)>
 ]>
 
 
 <users>
     <user>
         <username>Akshay</username>
-        <password>1234</password>
+        <countrycode>+91</countrycode>
     </user>
 
     <user>
         <username>Akash</username>
-        <password>1234</password>
+        <countrycode>+91</countrycode>
     </user>
 
     <user>
         <username>Hare</username>
-        <password>1234</password>
+        <countrycode>+91</countrycode>
     </user>
 
     <user>
         <username>Abhishek</username>
-        <password>1234</password>
+        <countrycode>+91</countrycode>
     </user>
 
     <user>
         <username>Himanshu</username>
-        <password>1234</password>
+        <countrycode>+91</countrycode>
     </user>
 
 
