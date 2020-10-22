@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone = "no"?>
 <?xml-stylesheet type="html/xsl" href="feedback.xsl"?>
 
-<!DOCTYPE feedback [
+<!DOCTYPE feedbacks [
 <!ELEMENT feedbacks (feedback+)>
 <!ELEMENT feedback (name, age, email, info)>
 <!ELEMENT name (#PCDATA)>
