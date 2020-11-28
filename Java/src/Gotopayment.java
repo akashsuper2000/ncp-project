@@ -22,7 +22,8 @@ public class Gotopayment extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String uname = request.getParameter("id");
 		String pass = request.getParameter("password");
-		LoginDao user = new LoginDao();	
+		LoginDao user = new LoginDao();
+		System.out.println(uname+" "+pass);
 		
 		try {
 			if(user.check(uname, pass)==1)

@@ -26,7 +26,7 @@ public class SponsorPaymentDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			System.out.println("JAR File exists");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sys", "root", "root");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ncp", "root", "akash2000");
 			Statement stmt = con.createStatement();
 			String sql = "insert into SponsorPayments(paymentRefNo,userid,amount,donated_date,pan_number) values (default,?,?,NOW(),?)";
 			PreparedStatement st = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);

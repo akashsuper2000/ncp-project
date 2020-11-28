@@ -19,7 +19,7 @@
 </head>
 
 <body>
-   <%
+<%
 response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
 response.setHeader("Pragma","no-cache");
 response.setHeader("Expires","0");
@@ -50,7 +50,7 @@ response.setHeader("Expires","0");
                             <article class="tile is-child box">
                                 <img src="content/img/Funds.png"/>
                                 <p class="title">60k</p>
-                                <p class="subtitle">Funds Recieved</p>
+                                <p class="subtitle">Funds Received</p>
                             </article>
                         </div>
                         <div class="tile is-parent">

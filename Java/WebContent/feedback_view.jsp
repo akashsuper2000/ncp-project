@@ -32,6 +32,8 @@ response.setHeader("Expires","0");
 </body>
 
 <script>
+	var a = <%= session.getAttribute("feedback") %>;
+	console.log(a);
     var _table_ = document.createElement('table'),
         _tr_ = document.createElement('tr'),
         _th_ = document.createElement('th'),
@@ -70,22 +72,7 @@ response.setHeader("Expires","0");
         return columnSet;
     }
 
-
-    document.body.appendChild(buildHtmlTable([{
-            "name": "Akshay",
-            "age": 50,
-            "email": "akshayronaldo@gmail.com",
-        },
-        {
-            "name": "himanshu",
-            "age": "25",
-            "email": "swimming@x.com",
-        },
-        {
-            "name": "Akash",
-            "info": "Really great job! All the best!"
-        }
-    ]));
+    document.body.appendChild(buildHtmlTable(a));
 
     document.getElementsByTagName('table')[0].classList.add("table-bordered");
     document.getElementsByTagName('table')[0].classList.add("feedback-table");

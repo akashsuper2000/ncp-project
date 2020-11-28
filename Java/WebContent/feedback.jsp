@@ -42,7 +42,7 @@ response.setHeader("Expires","0");
         </header>
 
 
-        <form id='survey-form'>
+        <form id='survey-form' action='feedback' method='post'>
             <fieldset id='personal-info'>
 
                 <label for='name' id='name-label'>name:</label>
