@@ -21,7 +21,7 @@ import javax.servlet.ServletContext;
 
 public class SponsorPaymentDao {
 
-	public ResultSet insert(String userid, String amount,String pan_number) throws ClassNotFoundException
+	public ResultSet insert(String userid, String amount, String pan_number) throws ClassNotFoundException
 	{
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
