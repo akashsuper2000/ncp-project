@@ -25,7 +25,7 @@ header {
 }
 
 header h1 {
-    font-size: 65px;
+    font-size: 50px;
 }
 
 header p {
@@ -136,7 +136,7 @@ button:hover {
 th,
 td {
     border: 2px solid;
-    padding: 10px;
+    padding: 10px !important;
 }
 
 th {
@@ -148,6 +148,7 @@ th {
 
 .feedback-table {
     width: 80%;
+    height: 300px;
     padding: 2px;
     margin-left: auto;
     margin-right: auto;

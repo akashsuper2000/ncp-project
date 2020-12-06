@@ -16,6 +16,7 @@
         });
     </script>
     <link rel="stylesheet" href="content/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="content/css/sponsor_admin.css">
     <link rel="stylesheet" href="content/css/feedback.css">
 
 </head>
@@ -26,11 +27,13 @@ response.setHeader("Pragma","no-cache");
 response.setHeader("Expires","0");
 %>
 
-    <div class="hero is-info is-fullheight">
-        <div id="navigation" style="padding: 0px;"></div>
-
-        <main style="background-color: #fff;color: #000">
-
+	<div id="topnav"></div>
+	
+	<div class="container">
+        <div class="columns">
+            <div id="sidenav"> </div>
+            <div class="column is-9">
+            <div class="container">
             <div class='spacer'></div>
 
             <header>
@@ -38,7 +41,9 @@ response.setHeader("Expires","0");
                     Feedback View
                 </h1>
             </header>
-        </main>
+            </div>
+    		</div>
+    	</div>
     </div>
 </body>
 
@@ -83,7 +88,7 @@ response.setHeader("Expires","0");
         return columnSet;
     }
 
-    document.body.appendChild(buildHtmlTable(a));
+    document.getElementsByClassName('container')[1].appendChild(buildHtmlTable(a));
 
     document.getElementsByTagName('table')[0].classList.add("table-bordered");
     document.getElementsByTagName('table')[0].classList.add("feedback-table");
