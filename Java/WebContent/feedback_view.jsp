@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samaritan - Feedback View</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Samaritan </title>
+    <link rel = "icon" href = "content/img/samaritan.png" type = "text"> 
+    <script src="content/jquery/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#topnav').load('content/jquery/admin_topnav.jsp');
+            $('#sidenav').load('content/jquery/admin_sidenav.html');
+            $("#5").addClass("is-active")
+        });
+    </script>
     <link rel="stylesheet" href="content/css/bootstrap.css">
-    <link rel="stylesheet" href="content/css/feedback.css">    
+    <link rel="stylesheet" href="content/css/feedback.css">
 
 </head>
 <body>
