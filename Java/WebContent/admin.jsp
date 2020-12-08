@@ -49,21 +49,21 @@ response.setHeader("Expires","0");
                         <div class="tile is-parent">
                             <article class="tile is-child box">
                                 <img src="content/img/Funds.png"/>
-                                <p class="title">60k</p>
+                                <p class="title">$1437</p>
                                 <p class="subtitle">Funds Received</p>
                             </article>
                         </div>
                         <div class="tile is-parent">
                             <article class="tile is-child box">
                                 <img src="content/img/Events.webp"/>
-                                <p class="title">119</p>
+                                <p class="title">3</p>
                                 <p class="subtitle">Events Conducted</p>
                             </article>
                         </div>
                         <div class="tile is-parent">
                             <article class="tile is-child box">
                                 <img src="content/img/Users.png"/>
-                                <p class="title">119</p>
+                                <p class="title">7</p>
                                 <p class="subtitle">Registered Users</p>
                             </article>
                         </div>

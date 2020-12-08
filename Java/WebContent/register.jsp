@@ -56,7 +56,7 @@
  response.setHeader("Expires","0");
 
 	 if(session.getAttribute("username")!=null)
-	 	response.sendRedirect("payment.jsp");
+	 	response.sendRedirect("login.jsp");
  %>
  
     <div class='Container'>
@@ -66,7 +66,7 @@
             <h1 class='Heads'>Register as a donor</h1>
             <h7 class='Content btn-danger'>* We collect this information only for official records purposes. We won't spam your mails.</h7>
             <div class='Content'>
-                <form action='/payment.jsp' onsubmit="return validate()">
+                <form action='onRegister' onsubmit="return CheckPassword()" method="post">
 
                     <div class='FormGroup'>
                         <input class='InputBoxes' name='id' placeholder='Username' pattern="([^\s][A-zÃ-Å¾\s]+)" required></input>
